@@ -82,6 +82,7 @@ public class Proof extends AppConfigurationAware {
 		expectedResult.setVersion(2L);
 		expectedResult.setProcessedViewData("MOUNTAIN AND SKY");
 		
-		Assert.assertEquals(expectedResult, retrievedEntity2);
+		System.out.println("Test will fail unless the dirty flag reset is removed!");
+		Assert.assertEquals("expected to be looking at mountains and sky, but instead I'm looking at cubicle walls.", expectedResult, retrievedEntity2);
 	}
 }
