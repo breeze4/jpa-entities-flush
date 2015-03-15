@@ -18,6 +18,6 @@
 	<logger name="com.entities" level="ALL" />
 	<logger name="org.hibernate.type" level="ALL" />
 	<logger name="org.hibernate.type.BasicTypeRegistry" level="ERROR" />
-	<logger name="org.hibernate.sql" level="ALL" />
-	<logger name="org.springframework.transaction" level="ALL" />
+	<logger name="org.hibernate.SQL" level="ALL" />
+	<logger name="org.hibernate.jpa" level="ALL" />
 </configuration>

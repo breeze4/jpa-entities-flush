@@ -45,11 +45,13 @@ public class ViewEntity implements Serializable {
 	
 	@Column(name = "processed_view_data")
 	public String getProcessedViewData() {
-		System.out.println("dirty? " + dirty + " ...getting view data: " + viewData + " processed: " + processedViewData);
-		System.out.println("getting processed view data..." + this.toString());
+		System.out.println("dirty? " + dirty + " ...getting view data: " + viewData + ", processed: " + processedViewData);
 		if(dirty) {
 			// comment this line out to get the test to pass!
 			dirty = false;
+			// It's also the correct thing to do:
+			//  - if an entity has been pulled from the database, assume it's been modified
+			//  - can't do performance enhancement at the sake of correctness
 			processedViewData = processData(viewData);
 		}
 		return processedViewData;
